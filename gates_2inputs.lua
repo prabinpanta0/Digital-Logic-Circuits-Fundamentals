@@ -38,28 +38,31 @@ function XOR(a, b)
 end
 
 -- Testing
--- inputs = {
--- 	{a = false, b = false},
--- 	{a = false, b = true},
--- 	{a = true, b = false},
--- 	{a = true, b = true},
--- }
+function test_gates_2inputs()
+	inputs = {
+		{a = false, b = false},
+		{a = false, b = true},
+		{a = true, b = false},
+		{a = true, b = true},
+	}
 
--- for i, pair in ipairs(inputs)
--- do
--- 	local a, b = pair.a, pair.b
-	
--- 	print ("Input: ", a, b)
--- 	print ("AND: ", AND(a,b))
--- 	print ("OR: ", OR(a, b))
--- 	print ("XOR: ", XOR(a,b))
--- 	print ("NOT A: ", NOT(a))
--- 	print ("NOT B: ", NOT(b))
--- end
+	for i, pair in ipairs(inputs)
+	do
+		local a, b = pair.a, pair.b
+		
+		print ("Input: ", a, b)
+		print ("AND: ", AND(a,b))
+		print ("OR: ", OR(a, b))
+		print ("XOR: ", XOR(a,b))
+		print ("NOT A: ", NOT(a))
+		print ("NOT B: ", NOT(b))
+	end
+end
 
 return {
     AND = AND,
     OR = OR,
     NOT = NOT,
-    XOR = XOR
+    XOR = XOR,
+	test_gates_2inputs = test_gates_2inputs
 }

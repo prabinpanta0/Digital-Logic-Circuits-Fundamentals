@@ -3,30 +3,10 @@ local AND = gates.AND
 local OR = gates.OR
 local NOT = gates.NOT
 local XOR = gates.XOR
+local adder = require("full_adder")
+local full_adder = adder.full_adder
 
-local a = {0, 1, 0, 1} -- 1010 = 10
-local b = {1, 1, 0, 0} -- 0011 = 3
 
--- Full adder
-function full_adder(a, b, cin)
-    -- convert to true and false
-    local abit = (a == 1)
-    local bbit = (b == 1)
-    local cbit = (cin == 1)
-
-    -- logic of full adder
-    local sum1 = XOR(abit, bbit)
-    local carry1 = AND(abit, bbit)
-    local sum_bool = XOR(sum1, cbit)
-    local carry2 = AND(sum1, cbit)
-    local carry_bool = OR(carry1, carry2)
-
-    -- convert back to 0 and 1
-    local sum = sum_bool and 1 or 0
-    local carryout = carry_bool and 1 or 0
-
-    return sum, carryout
-end
 
 function multi_bit_sub(a, b)
     local result = {}
@@ -51,24 +31,36 @@ function multi_bit_sub(a, b)
 end
 
 
+function test_multi_bit_sub()
+    
 
-local result = multi_bit_sub(a, b)
+    local a = {0, 1, 0, 1} -- 1010 = 10
+    local b = {1, 1, 0, 0} -- 0011 = 3
 
-print("a: ")
-for i = #a, 1, -1 do
-    io.write(a[i])
+
+    local result = multi_bit_sub(a, b)
+
+    print("a: ")
+    for i = #a, 1, -1 do
+        io.write(a[i])
+    end
+
+    print("\n")
+    print("b: ")
+    for i = #b, 1, -1 do
+        io.write(b[i])
+    end
+
+    print("\n")
+    print("result: ")
+    for i = #result, 1, -1 do
+        io.write(result[i])
+    end
+
+    print()
 end
 
-print("\n")
-print("b: ")
-for i = #b, 1, -1 do
-    io.write(b[i])
-end
-
-print("\n")
-print("result: ")
-for i = #result, 1, -1 do
-    io.write(result[i])
-end
-
-print()
+return {
+    test_multi_bit_sub = test_multi_bit_sub,
+    multi_bit_sub = multi_bit_sub
+}

@@ -3,44 +3,12 @@ local gates = require("gates_2inputs")
 local AND = gates.AND
 local OR = gates.OR
 local XOR = gates.XOR
+local adder = require("full_adder")
+local full_adder = adder.full_adder
+local multi_addr = require("multi-bit_adder")
+local multi_bit_adder = multi_addr.multi_bit_adder
 
--- full adder
-function full_adder(a, b, cin)
-    -- convert 1/0 to true and false
-    local abool = (a == 1)
-    local bbool = (b == 1)
-    local cbool = (cin == 1)
 
-    local sum1 = XOR(abool, bbool)
-    local carry1 = AND(abool, bbool)
-    local sum_bool = XOR(sum1, cbool)
-    local carry2 = AND(sum1, cbool)
-    local carry_bool = OR(carry1, carry2)
-    
-    -- convert bool to 1/0
-    local sum = sum_bool and 1 or 0
-    local carry = carry_bool and 1 or 0
-
-    return sum, carry
-end
-
-function multi_bit_adder(a, b)
-    local result = {}
-    local carry = 0
-    local n = math.max(#a, #b)
-    
-    for i = 1, n do
-        local a_bit = a[i] or 0
-        local b_bit = b[i] or 0
-        local sum
-        sum, carry = full_adder(a_bit, b_bit, carry)
-        table.insert(result, sum)
-    end
-        if carry == 1 then
-            table.insert(result, 1)
-        end
-    return result
-end
 
 function multi_bit_multi(a, b)
     local final_result = {0}
