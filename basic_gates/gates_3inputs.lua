@@ -60,6 +60,5 @@ end
 return{
     AND3 = AND,
     OR3 = OR,
-    XOR3 = XOR,
-    test_gates_3inputs = test_gates_3inputs
+    XOR3 = XOR
 }

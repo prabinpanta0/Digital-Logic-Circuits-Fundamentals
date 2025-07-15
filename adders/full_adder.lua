@@ -54,7 +54,6 @@ end
 
 return {
     full_adder = full_adder,
-    full_adder_bool = full_adder_bool,
-    test_full_adder = test_full_adder
+    full_adder_bool = full_adder_bool
 }
 

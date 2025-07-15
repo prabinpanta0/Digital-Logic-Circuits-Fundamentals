@@ -56,6 +56,5 @@ function test_multi_bit_mult()
 end
 
 return{
-    multi_bit_multi = multi_bit_multi,
-    test_multi_bit_mult = test_multi_bit_mult
+    multi_bit_multi = multi_bit_multi
 }

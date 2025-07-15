@@ -43,6 +43,5 @@ function test_multi_bit_addt()
 end
 
 return {
-    multi_bit_adder = multi_bit_adder,
-    test_full_adder = test_multi_bit_addt
+    multi_bit_adder = multi_bit_adder
 }

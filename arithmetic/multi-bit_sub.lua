@@ -61,6 +61,5 @@ function test_multi_bit_sub()
 end
 
 return {
-    test_multi_bit_sub = test_multi_bit_sub,
-    multi_bit_sub = multi_bit_sub
+    test_multi_bit_sub = test_multi_bit_sub
 }

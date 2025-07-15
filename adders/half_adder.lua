@@ -24,6 +24,5 @@ function test_half_adder()
 end
 
 return{
-    test_half_adder = test_half_adder,
-    half_adder = half_adder
+    test_half_adder = test_half_adder
 }

@@ -63,6 +63,5 @@ return {
     AND = AND,
     OR = OR,
     NOT = NOT,
-    XOR = XOR,
-	test_gates_2inputs = test_gates_2inputs
+    XOR = XOR
 }
