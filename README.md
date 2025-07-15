@@ -1,4 +1,4 @@
-# Digital Logic Circuits in Lua
+# Digital Logic Circuits Fundamentals
 
 A comprehensive practice repository for implementing fundamental digital logic circuits and arithmetic operations using Lua programming language.
 
