@@ -1,4 +1,4 @@
-local gates = require("gates_2inputs")
+local gates = require("basic_gates.gates_2inputs")
 local XOR = gates.XOR
 local AND = gates.AND
 

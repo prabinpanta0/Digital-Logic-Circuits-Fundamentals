@@ -1,9 +1,9 @@
-local gates = require("gates_2inputs")
+local gates = require("basic_gates.gates_2inputs")
 local AND = gates.AND
 local OR = gates.OR
 local NOT = gates.NOT
 local XOR = gates.XOR
-local adder = require("full_adder")
+local adder = require("adders.full_adder")
 local full_adder = adder.full_adder
 
 

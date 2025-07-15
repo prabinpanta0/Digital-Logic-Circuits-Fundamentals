@@ -1,8 +1,8 @@
-local GATES = require("gates_2inputs")
+local GATES = require("basic_gates.gates_2inputs")
 local AND = GATES.AND
 local OR = GATES.OR
 local XOR = GATES.XOR
-local adder = require("full_adder")
+local adder = require("adders.full_adder")
 local full_adder = adder.full_adder
 
 --[[
@@ -44,5 +44,5 @@ end
 
 return {
     multi_bit_adder = multi_bit_adder,
-    test_full_adder = test_full_adder
+    test_full_adder = test_multi_bit_addt
 }
