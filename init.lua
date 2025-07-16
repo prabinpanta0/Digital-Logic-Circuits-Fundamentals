@@ -16,5 +16,6 @@ digital_logic.AND = digital_logic.gates_2inputs.AND
 digital_logic.OR = digital_logic.gates_2inputs.OR
 digital_logic.NOT = digital_logic.gates_2inputs.NOT
 digital_logic.XOR = digital_logic.gates_2inputs.XOR
+digital_logic.NOR = digital_logic.gates_2inputs.NOR
 
 return digital_logic

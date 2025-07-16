@@ -19,6 +19,11 @@ function OR(a,b)
 	end
 end
 
+-- Nor Gate
+function NOR(a,b)
+	return not (a or b)
+end
+
 -- NOT Gate
 function NOT(a)
 	if a == true then
@@ -63,5 +68,6 @@ return {
     AND = AND,
     OR = OR,
     NOT = NOT,
-    XOR = XOR
+    XOR = XOR,
+	NOR = NOR
 }
